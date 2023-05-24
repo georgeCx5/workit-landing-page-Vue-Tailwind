@@ -1,12 +1,10 @@
 <script>
 import BtnApply from './components/BtnApply.vue'
 import TextFeatures from './components/TextFeatures.vue'
+import BtnNetworks from './components/BtnNetworks.vue'
 
 import LogoLight from '@/assets/images/logo-light.svg?component'
 import LogoDark from '@/assets/images/logo-dark.svg?component'
-import IconFacebook from '@/assets/images/icon-facebook.svg?component'
-import IconInstagram from '@/assets/images/icon-instagram.svg?component'
-import IconTwitter from '@/assets/images/icon-twitter.svg?component'
 
 // images
 import imgFounder from '@/assets/images/image-founder.webp'
@@ -41,17 +39,15 @@ export default {
     // components
     BtnApply,
     TextFeatures,
+    BtnNetworks,
     // SVG's
     LogoLight,
     LogoDark,
-    IconFacebook,
-    IconInstagram,
-    IconTwitter,
   }
 }
 </script>
 <template>
-  <body class=" flex flex-col items-center font-manrope w-full">
+  <body class=" flex flex-col items-center w-full font-manrope">
     <header class=" relative h-[462px] w-full z-30">
       <div class=" flex flex-col gap-16 h-full bg-neo-black">
         <nav class=" flex justify-between items-center px-4 pt-8">
@@ -59,18 +55,20 @@ export default {
           <BtnApply :txt="btnText" txt-color="text-neo-white" txt-hv-color="hover:text-neo-green" :has-border="true" />
         </nav>
         <div class=" flex flex-col items-center gap-10 px-4">
-          <h1 class=" text-neo-white text-center text-[50px] leading-[50px] font-fraunces font-normal tracking-tighter">Data <span
-              class=" border-b-[3px] border-neo-green">tailored</span> to your needs.
+          <h1 class=" text-neo-white text-center text-[50px] leading-[50px] font-fraunces font-normal tracking-tighter">
+            Data <span class=" border-b-[3px] border-neo-green">tailored</span> to your needs.
           </h1>
-          <button class=" w-[133px] h-[55px] bg-neo-green text-neo-black text-btn-base font-extrabold">Learn more</button>
+          <button
+            class=" w-[133px] h-[55px] bg-neo-green hover:bg-transparent text-neo-black hover:text-neo-green text-btn-base font-extrabold border border-neo-green">Learn
+            more</button>
         </div>
       </div>
       <!-- rounded end -->
       <div class=" absolute -bottom-4 w-full h-8 bg-neo-black rounded-b-[50%]">
       </div>
     </header>
-    <main class=" flex flex-col items-center -mt-[72px]">
-      <div class=" relative flex flex-col items-center gap-10 h-[1060px] bg-neo-ghost">
+    <main class=" flex flex-col items-center  w-full -mt-[72px]">
+      <div class=" relative flex flex-col items-center gap-10 w-full h-[1060px] bg-neo-ghost">
         <img class=" w-[320px] z-50 mb-5" :src="imgPhone" alt="imgPhone">
         <TextFeatures :num="datos[0].id" :title="datos[0].title" :description="datos[0].description" />
         <TextFeatures :num="datos[1].id" :title="datos[1].title" :description="datos[1].description" />
@@ -95,9 +93,9 @@ export default {
     <footer class=" flex flex-col items-center gap-[58px] my-[68px]">
       <LogoDark />
       <div class=" flex justify-between w-[116px]">
-        <component is="IconFacebook" />
-        <component is="IconInstagram" />
-        <component is="IconTwitter" />
+        <BtnNetworks network="Facebook" />
+        <BtnNetworks network="Instagram" />
+        <BtnNetworks network="Twitter" />
       </div>
     </footer>
   </body>
