@@ -27,6 +27,6 @@ export default {
 }
 </script>
 <template>
-   <button class=" text-btn-base" :class="`${bgColor} ${bgHvColor} ${txtColor} ${txtHvColor} ${value} border-neo-green`">{{
+   <button class=" text-btn-base dsk:text-btn-lg" :class="`${bgColor} ${bgHvColor} ${txtColor} ${txtHvColor} ${value} border-neo-green`">{{
       txt }}</button>
 </template>
