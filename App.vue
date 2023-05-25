@@ -58,7 +58,7 @@ export default {
     <patternTwo class=" absolute hidden tb:block tb:top-60 dsk:top-[314px] tb:-right-24 dsk:-right-[70px] z-40" />
     <header class=" relative h-[462px] tb:h-[500px] dsk:h-[660px] w-full z-30">
       <div class=" flex flex-col gap-16 tb:gap-14 dsk:gap-[62px] h-full bg-neo-black">
-        <nav class=" flex justify-between items-center px-4 tb:px-10 pt-8 dsk:pt-[50px]">
+        <nav class=" flex justify-between items-center px-4 tb:px-10 dsk:px-[165px] pt-8 dsk:pt-[50px]">
           <LogoLight />
           <BtnApply :txt="btnText" txt-color="text-neo-white" txt-hv-color="hover:text-neo-green" :has-border="true" />
         </nav>
